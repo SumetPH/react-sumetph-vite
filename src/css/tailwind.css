@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    /* color: #bdbdbd; */
+    /* background-color: #2d3436; */
+    line-height: 1.6;
+  }
+}
