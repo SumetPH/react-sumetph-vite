@@ -16,6 +16,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          branch: main
+          branch: master
           folder: dist
           repository-name: "SumetPH/sumetph.github.io"
