@@ -100,7 +100,7 @@ export default function ResumeMotion() {
 
       <div className="mb-10 text-center">
         <p className="text-lg font-medium">
-          I'm a Web Development. I'm interested in Front-end React.js and Vue.js
+          I'm a Web Developer. I'm interested in Front-end React.js and Vue.js
           or Back-end Node.js.
         </p>
       </div>
