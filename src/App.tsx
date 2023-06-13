@@ -1,11 +1,16 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import ResumeMotion from "./views/ResumeMotion";
+import Test from "./views/Test";
 
 const router = createHashRouter([
   {
     path: "/",
     element: <ResumeMotion />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ]);
 

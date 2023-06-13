@@ -9,6 +9,7 @@ import ProfileImg from "../assets/img/profile.png";
 import Job from "../components/resume/Job";
 import Tool from "../components/resume/Tool";
 import Footer from "../components/resume/Footer";
+import Certificate from "../components/resume/Certificate";
 
 export default function ResumeMotion() {
   const containerRef = useRef(null);
@@ -46,11 +47,8 @@ export default function ResumeMotion() {
   );
 
   const jobRef = useRef(null);
-  const { scrollYProgress: jobScrollYProgress } = useScroll({
-    target: educationRef,
-    offset: ["start end", "center center"],
-  });
-  const jobOpacity = useTransform(jobScrollYProgress, [0, 1], [0, 1]);
+
+  const certificateRef = useRef(null);
 
   const toolRef = useRef(null);
   const toolInView = useInView(toolRef);
@@ -133,14 +131,20 @@ export default function ResumeMotion() {
           <div className="col-span-2">
             <motion.div
               style={{ opacity: educationOpacity }}
+              className="h-full"
               ref={educationRef}
             >
               <Education />
             </motion.div>
           </div>
-          <div className="col-span-2">
-            <motion.div style={{ opacity: jobOpacity }} ref={jobRef}>
+          <div className="col-span-2 md:col-span-1">
+            <motion.div ref={jobRef} className="h-full">
               <Job />
+            </motion.div>
+          </div>
+          <div className="col-span-2 md:col-span-1">
+            <motion.div ref={certificateRef} className="h-full">
+              <Certificate />
             </motion.div>
           </div>
           <div className="col-span-2">
