@@ -1,13 +1,13 @@
 type Card = {
   title: string;
-  children: any;
+  children: React.ReactNode;
 };
 
 const _Card = ({ title, children }: Card) => {
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 rounded-xl mb-3 mx-3 p-4">
-      <h2 className="font-bold text-2xl">{title}</h2>
-      <div className="ml-6 my-3">{children}</div>
+    <div className="bg-gray-200 dark:bg-gray-800 rounded-xl py-6 px-6 h-full">
+      <h2 className="font-bold text-2xl mb-3">{title}</h2>
+      <div className="ml-6">{children}</div>
     </div>
   );
 };

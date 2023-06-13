@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import html from "./tool/html.png";
 import css from "./tool/css.png";
 import js from "./tool/js.png";
@@ -32,7 +34,13 @@ const Tool = () => {
       {data.map((item, index) => (
         <div key={index} className="w-4/12 md:w-4/12 lg:w-2/12 p-4">
           <a href={item.href} target="_blank" rel="noopener noreferrer">
-            <img src={item.src} alt="" />
+            <motion.img
+              initial={{ opacity: 0, translateY: 100 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ delay: index * 0.5 }}
+              src={item.src}
+              alt=""
+            />
           </a>
         </div>
       ))}
