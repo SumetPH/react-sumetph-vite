@@ -49,7 +49,7 @@ export default function ModalCertificate({ children, img, rotate }: Props) {
             >
               <img
                 className={`
-                    ${rotate === "landscape" ? "w-full" : "h-full"}
+                    ${rotate === "landscape" ? "md:w-full" : "md:h-full"}
                 `}
                 src={img}
                 alt=""
