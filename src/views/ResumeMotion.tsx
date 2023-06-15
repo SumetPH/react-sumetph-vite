@@ -71,7 +71,7 @@ export default function ResumeMotion() {
             initial={{ opacity: 0, translateY: 200 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1 }}
-            className="rounded-full border-white border-4"
+            className="rounded-full border-white border-4 w-72 h-72"
             src={ProfileImg}
             alt=""
           />
