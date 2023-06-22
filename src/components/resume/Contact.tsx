@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import Card from "./_Card";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
-    <Card title="Contact">
+    <Card title={t("contact.title")}>
       <div className="mb-2">
         <p>Email : notsumet1@gmail.com</p>
       </div>
@@ -21,7 +24,7 @@ const Contact = () => {
       </div>
       <div className="mb-2">
         <p>
-          Portfolio :{" "}
+          Resume :{" "}
           <a
             className="hover:text-white"
             href="https://sumetph.github.io"

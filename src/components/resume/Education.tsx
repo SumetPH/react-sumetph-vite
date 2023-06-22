@@ -1,32 +1,24 @@
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { FaGraduationCap } from "react-icons/fa";
 import Card from "./_Card";
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
-  const bgColor = () => {
-    if (localStorage.theme === "dark") {
-      return "red";
-    } else {
-      return "white";
-    }
-  };
+  const { t } = useTranslation();
 
   return (
-    <Card title="Education">
+    <Card title={t("education.title")}>
       <Timeline style={{ fontSize: "1rem", fontWeight: 400 }}>
         <TimelineEvent
           title=""
           icon={<FaGraduationCap />}
           iconColor="#4a4a4a"
           contentStyle={{
-            backgroundColor: bgColor,
+            backgroundColor: "inherit",
             borderRadius: 8,
           }}
         >
-          <span>
-            2017 : Diploma in Electronic Srisongkram Industrial Technology,
-            Nakhonphanom University
-          </span>
+          <span>2017 : {t("education.school1")}</span>
           <br />
           GPA : 3.65
         </TimelineEvent>
@@ -35,15 +27,11 @@ const Education = () => {
           icon={<FaGraduationCap />}
           iconColor="#4a4a4a"
           contentStyle={{
-            backgroundColor: bgColor,
+            backgroundColor: "inherit",
             borderRadius: 8,
           }}
         >
-          <span>
-            2019 : Bachelor of Business Administration Program in Computer
-            Information System Rajamangala University of Technology Isan Sakon
-            Nakhon Campus
-          </span>
+          <span>2019 : {t("education.school2")}</span>
           <br />
           GPA : 3.69
         </TimelineEvent>

@@ -1,29 +1,24 @@
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { MdWork } from "react-icons/md";
 import Card from "./_Card";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
-  const bgColor = () => {
-    if (localStorage.theme === "dark") {
-      return "red";
-    } else {
-      return "white";
-    }
-  };
+  const { t } = useTranslation();
 
   return (
-    <Card title="Work Experience">
+    <Card title={t("experience.title")}>
       <Timeline style={{ fontSize: "1rem", fontWeight: 400 }}>
         <TimelineEvent
           title=""
           icon={<MdWork />}
           iconColor="#4a4a4a"
           contentStyle={{
-            backgroundColor: bgColor,
+            backgroundColor: "inherit",
             borderRadius: 8,
           }}
         >
-          <span>2021 - Present</span>
+          <span>2021 - {t("experience.present")}</span>
           <br />
           <b>Front-End Developer</b>
           <br />

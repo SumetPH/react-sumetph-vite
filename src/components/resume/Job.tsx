@@ -9,10 +9,13 @@ import {
   TbBrandNextjs,
 } from "react-icons/tb";
 import { IoLogoNodejs } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 const Job = () => {
+  const { t } = useTranslation();
+
   return (
-    <Card title="Job Target">
+    <Card title={t("job.title")}>
       <div className="mb-3">
         <div className="grid grid-cols-2">
           <div className="col-span-1">

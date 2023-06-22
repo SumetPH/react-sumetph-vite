@@ -1,15 +1,15 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+
 import { useRef } from "react";
+
+import Cover from "../components/resume/Cover";
 import Experience from "../components/resume/Experience";
 import Contact from "../components/resume/Contact";
 import Education from "../components/resume/Education";
-
-import ProfileImg from "../assets/img/profile.png";
 import Job from "../components/resume/Job";
 import Tool from "../components/resume/Tool";
-import Footer from "../components/resume/Footer";
 import Certificate from "../components/resume/Certificate";
+import Footer from "../components/resume/Footer";
 
 export default function ResumeMotion() {
   const containerRef = useRef(null);
@@ -55,53 +55,7 @@ export default function ResumeMotion() {
 
   return (
     <div ref={containerRef}>
-      <div className="h-screen w-full flex justify-center items-center relative">
-        <motion.div
-          initial={{ opacity: 0, translateY: -100 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{ duration: 0.5, delay: 1.5 }}
-          className="absolute top-[20px] right-[20px]"
-        >
-          <a href="https://github.com/sumetph" target="_blank">
-            <FaGithub size={30} />
-          </a>
-        </motion.div>
-        <div className="flex flex-wrap justify-center items-center">
-          <motion.img
-            initial={{ opacity: 0, translateY: 200 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 1 }}
-            className="rounded-full border-white border-4 w-72 h-72"
-            src={ProfileImg}
-            alt=""
-          />
-          <div className="ml-10 mt-10 md:mt-0">
-            <motion.h1
-              initial={{ opacity: 0, translateX: 100 }}
-              animate={{ opacity: 1, translateX: 0 }}
-              transition={{ duration: 1 }}
-              className="text-3xl font-bold"
-            >
-              Front End Developer
-            </motion.h1>
-            <motion.h2
-              initial={{ opacity: 0, translateX: 100 }}
-              animate={{ opacity: 1, translateX: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-              className="text-lg "
-            >
-              Hello, My name is SumetPH.
-            </motion.h2>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-10 text-center">
-        <p className="text-lg font-medium">
-          I'm a Web Developer. I'm interested in Front-end React.js and Vue.js
-          or Back-end Node.js.
-        </p>
-      </div>
+      <Cover />
 
       <div className="container mx-auto ">
         <div className="grid grid-cols-2 gap-5 mx-5">
