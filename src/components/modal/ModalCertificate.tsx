@@ -43,8 +43,8 @@ export default function ModalCertificate({ children, img, rotate }: Props) {
                 exit: { opacity: 0, translateY: 100 },
               }}
               className={`
-              border-white border-4 rounded-lg relative
-              ${rotate === "landscape" ? "md:w-[60%]" : "md:h-[80%]"}
+                relative
+                ${rotate === "landscape" ? "md:w-[60%]" : "md:h-[80%]"}
               `}
             >
               <img
